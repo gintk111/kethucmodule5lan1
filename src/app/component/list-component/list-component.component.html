@@ -1,0 +1,71 @@
+
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="panel panel-default border-square">
+        <div class="panel-heading border-square">
+          <div class="row">.
+            <div class="col-sm-2">
+              <h3 class="pt-5"></h3>
+            </div>
+            <div class="col-sm-8">
+              <form method="GET">
+                <div style="width: 1000px; margin-left:300px">
+                  <div style="float: left;">
+                    <input type="text" name="name" id="name" class="form-control" value="" placeholder="Nhập từ khóa...">
+                  </div>
+                  <div style="padding: 0; margin: 0;float: left;">
+                    <button id="button1"  class="btn btn-warning" type="submit" style="padding: 6px 35px;"><i class="fa fa-search"></i></button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="col-sm-1">
+              <a href="/create-book" class="btn btn-primary" style="margin-left: -30px;">
+                <i class="fa fa-plus-square fa-fw" ></i>Thêm mới
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- thông báo -->
+        <div class="alert alert-info" id="time" style='display:none'>
+          <!-- thông báo -->
+          <div class="panel-body">
+          </div>
+          <div style="float: right;"></div>
+        </div>
+        <div class="table-responsive">
+          <table class="table table-bordered table-hover">
+            <thead>
+            <tr>
+              <th style="text-align: center">#</th>
+              <th style="text-align: center">Tên sách</th>
+              <th style="text-align: center">Tác giả</th>
+              <th style="text-align: center">Thao tác</th>
+            </tr>
+            </thead>
+            <tbody>
+            <ng-container *ngFor="let books of books,let i = index">
+              <tr>
+                <th style="text-align: center">{{i + 1}}</th>
+                <td style="text-align: center">{{books.title}}</td>
+                <td style="text-align: center">{{books.author}}</td>
+                <td style="text-align: center">
+                  <a [routerLink]="['/update-book/',books.id]">
+                    <i class="glyphicon glyphicon-edit"></i> Sửa
+                  </a>
+                  <a (click)="deleteBook(books.id)" >
+                    <i class="glyphicon glyphicon-trash"></i> Xóa
+                  </a>
+                  <i class="glyphicon glyphicon-zoom-in" style="margin-left: 5px; color: #337ab7" >
+                    <button type="button" style="border: none; padding: 0; padding: 0; background-color: white; color: #337ab7" (click)="detailsBook(books.id)"  data-toggle="modal" data-target="#myModal">Xem</button>
+                  </i>
+                </td>
+              </tr>
+            </ng-container>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+

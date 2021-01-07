@@ -1,0 +1,72 @@
+<div id="wrapper">
+  <nav class="navbar-default navbar-static-side" role="navigation">
+    <div class="sidebar-collapse">
+      <ul class="nav metismenu" id="side-menu">
+        <li class="nav-header fixed-menu" >
+          <div class="dropdown profile-element text-center">
+            <span class="text-center">
+              <img alt="image" class="img-thumbnail" src="assets/img/icon.png" style="width: 58px;height: 58px"/>
+            </span>
+            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+              <span class="clear">
+                <span class="block m-t-xs">
+                  <strong class="font-bold">
+                    <span class="text-muted text-xs"><b class="caret"></b></span>
+                  </strong>
+                </span></span>
+            </a>
+          </div>
+        </li>
+        <li class="mg-top-130">
+          <a href="/">
+            <i class="fa fa-home fa-fw active"></i>
+            <span class="nav-label">Thành Phố</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div id="page-wrapper" class="gray-bg">
+    <div class="row">
+      <!-- Navbar top -->
+      <nav class="navbar navbar-static-top" role="navigation">
+        <div class="navbar-header">
+          <a class="navbar-minimalize minimalize-styl-2 btn btn-primary"><i class="fa fa-navicon"></i></a>
+        </div>
+      </nav>
+      <!--./ end navbar top -->
+    </div>
+    <div class="wrapper wrapper-content">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="ibox float-e-margins">
+            <div class="ibox-title">
+              <div class="col-xs-12 pl-5">
+                <ol class="breadcrumb">
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-home"></i>Trang chủ
+                    </a>
+                  </li>
+                  <li class="active">
+                    <a href="#">
+                      <strong></strong>
+                    </a>
+                  </li>
+                </ol>
+              </div>
+            </div>
+            <div class="ibox-content">
+              <router-outlet></router-outlet>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="text-center">
+        <strong>Copyright</strong> SHI-V Company &copy; 2018
+      </div>
+    </div>
+  </div>
+</div>
